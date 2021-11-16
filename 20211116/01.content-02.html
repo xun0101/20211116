@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 內容</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+
+  <style>
+  .text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+  .mutiple-line-dot{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+    }
+  </style>
+</head>
+<body>
+  <h1>幾年天。</h1>
+  <p class="h1">不得而已手術我對男女小</p>
+
+  <h2>自定義標題</h2>
+  <p>使用通用類別再現 Bootstrap 3.0 中的小標題文本。</p>
+  <h3>
+    Fancy display heading
+    <small class="text-muted">With faded secondary text</small>
+  </h3>
+
+  <hr>
+
+  <h2>顯示標題</h2>
+  <p>一般的標題元素能在內容更短時扮演最佳角色。當你需要突出一個標題時，請考慮使用展示標題、細細、稍有風格化的標題樣式。</p>
+  <h1 class="display-1">Display 1</h1>
+  <h1 class="display-2">Display 2</h1>
+  <h1 class="display-3">Display 3</h1>
+  <h1 class="display-4">Display 4</h1>
+  <h1 class="display-5">Display 5</h1>
+  <h1 class="display-6">Display 6</h1>
+
+  <hr>
+
+  <h2>前導主題</h2>
+  <p>使用.lead讓一個模特。</p>
+  <p class="lead">
+    This is a lead paragraph. It stands out from regular paragraphs.
+  </p>
+  <p>
+    This is a lead paragraph. It stands out from regular paragraphs.
+  </p>
+
+  <hr>
+
+  <h2>行內文本元素</h2>
+  <p>使用行內HTML5元素的格式。</p>
+  <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+  <p><del>This line of text is meant to be treated as deleted text.</del></p>
+  <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+  <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+  <p><u>This line of text will render as underlined.</u></p>
+  <p><small>This line of text is meant to be treated as fine print.</small></p>
+  <p><strong>This line rendered as bold text.</strong></p>
+  <p><em>This line rendered as italicized text.</em></p>
+
+  <hr>
+
+  <h2>對齊</h2>
+  <p>用於文件中引用來自另一個來源的內容。在HTML 中使用 blockquote class="blockquote"。</p>
+  <p>HTML規範要求將塊引用於歸屬 blockquote 之外當提供來源歸屬，需要將。blockquote 包在 figure 之內，使用並且figure 狀語從句：加上.blockquote-footer類別的 figcaption 或是一個區塊元素（例如：p）。確保還要來源將名稱的包在 cite 中。</p>
+  <figure class="text-center">
+    <blockquote class="blockquote">
+      <p>A well-known quote, contained in a blockquote element.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Someone famous in <cite title="Source Title">Source Title</cite>
+    </figcaption>
+  </figure>
+  <!--我們是ltr 左(left)=>右(right)=>end-> -->
+  <!--阿語系rtl 左(left)=>end,右(right)=>start-> -->
+  <figure class="text-end">
+    <blockquote class="blockquote">
+      <p>A well-known quote, contained in a blockquote element.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Someone famous in <cite title="Source Title">Source Title</cite>
+    </figcaption>
+  </figure>
+
+  <hr>
+
+  <h2>描述型列表網站</h2>
+  <p>通過使用我們定義系統定義的類別（語言意混合）將項目和說明水平對齊.text-truncate。</p>
+  <h3>單行....</h3>
+  <p class="bg-info text-truncate" style="width: 300px;">
+    大力趨勢網通嘿嘿大部分演出網際網路關於輕鬆原文嚴格來了讓你，都要刺激轉換現實發達嘿嘿選單儘管平均一面就能吃了，回覆一台加大功能大賽，休閒有意完美簡歷網際快車機關笑着停止包括東京造型他說，衝擊同時腦袋嘿嘿第三添加訓練偉大經常，結婚資料庫每個聰明楠雅品牌不可。
+  </p>
+  <h3>多行</h3>
+  <p class="bg-info mutiple-line-dot" style="width: 300px;">
+    大力趨勢網通嘿嘿大部分演出網際網路關於輕鬆原文嚴格來了讓你，都要刺激轉換現實發達嘿嘿選單儘管平均一面就能吃了，回覆一台加大功能大賽，休閒有意完美簡歷網際快車機關笑着停止包括東京造型他說，衝擊同時腦袋嘿嘿第三添加訓練偉大經常，結婚資料庫每個聰明楠雅品牌不可。
+  </p>
+
+
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+</html>
