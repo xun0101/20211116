@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 通用類別</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    .container{
+      margin-bottom:20px;
+    }
+
+    h3{
+      margin: 20px 0;
+    }
+    .d-flex{
+      color: white;
+      background-color: var(--bs-gray-200);
+      margin-bottom: 20px;
+      height: 200px;
+    }
+    .d-flex>:nth-child(1){
+      background-color: var(--bs-purple);
+    }
+    .d-flex>:nth-child(2){
+      background-color: var(--bs-yellow);
+    }
+    .d-flex>:nth-child(3){
+      background-color: var(--bs-pink);
+    }
+    .d-flex>:nth-child(4){
+      background-color: var(--bs-green);
+    }
+    .d-flex>:nth-child(5){
+      background-color: var(--bs-cyan);
+    }
+    .d-flex>:nth-child(6){
+      background-color: var(--bs-gray);
+    }
+
+    .flex-1{
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Flex</h1>
+    <p>使用.flex-row 設定水平方向(預設值)或使用 .flex-row-reverse 來做水平方向翻轉</p>
+    <h2>水平</h2>
+    <div class="d-flex flex-row">
+      <div>Flex Item</div>
+      <div>Flex Item</div>
+      <div>Flex Item</div>
+    </div>
+    <div class="d-flex flex-row-reverse">
+      <div>Flex Item</div>
+      <div>Flex Item</div>
+      <div>Flex Item</div>
+    </div>
+    
+  </div>
+  <div class="container">
+    <h1>Flex</h1>
+    <p>使用.flex-column 設定垂直方向(預設值)或使用 .flex-column-reverse 來做垂直方向翻轉</p>
+    <h2>垂直</h2>
+    <div class="d-flex flex-column">
+      <div>Flex Item</div>
+      <div>Flex Item</div>
+      <div>Flex Item</div>
+    </div>
+    <div class="d-flex flex-column-reverse">
+      <div>Flex Item</div>
+      <div>Flex Item</div>
+      <div>Flex Item</div>
+    </div></div>
+
+    <div class="container">
+      <h2>主軸對齊</h2>
+      <h3>justify-content-*</h3>
+      <div class="d-flex justify-content-center">
+        <div>Flex Item1</div>
+        <div>Flex Item2</div>
+        <div>Flex Item3</div>
+      </div> 
+    </div>
+    
+    <div class="container">
+      <h2>次軸(交叉軸)對齊</h2>
+      <h3>align-items-*</h3>
+      <div class="d-flex aliign-items-center">
+        <div>Flex Item1</div>
+        <div>Flex Item2</div>
+        <div>Flex Item3</div>
+      </div> 
+    </div>
+
+    
+    <div class="container">
+      <h2>彈性項目自身對齊</h2>
+      <h3>align-self-*</h3>
+      <div class="d-flex">
+        <div class="align-self-start">Flex Item1</div>
+        <div class="align-self-end">Flex Item2</div>
+        <div class="align-self-center">Flex Item3</div>
+        <div class="align-self-stretch">Flex Item4</div>
+        <div class="align-self-baseline" style="font-size: 50px;">Flex Item5</div>
+        <div class="align-self-baseline" style="font-size: 100px;">Flex Item6</div>
+      </div> 
+    </div>
+
+    <div class="container">
+      <h2>.flex-fill 平均分配剩餘空間給彈性項目</h2>
+      <h3>這是平均欄寬</h3>
+      <div class="d-flex">
+        <div class="flex-fill">Flex Item1</div>
+        <div class="flex-fill">Flex Item2</div>
+        <div class="flex-fill">Flex Item3</div>
+      </div>
+      <h3>其實不是...</h3>
+      <p>可以將一欄內容增加多一點，會發現有所不同</p>
+      <p>.flex-fill => flex:1 1 auto</p>
+      <p>flex-basis 被設定為 auto ，寬度會隨內容去撐開</p>
+      <div class="d-flex">
+        <div class="flex-fill">Flex Item1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo,uri in corporis recusandae eius.</div>
+        <div class="flex-fill">Flex Item2</div>
+        <div class="flex-fill">Flex Item3</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>.flex-grow 與 .flex-fill作用相同</h2>
+      <p>.flex-grow = > flex:1 1auto =>flex:auto</p>
+      <div class="d-flex">
+        <div class="flex-grow-1">Flex Item1  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo,uri in corporis recusandae eius.</div>
+        <div class="flex-grow-1">Flex Item2</div>
+        <div class="flex-grow-1">Flex Item3</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>自創一個flex-1 class</h2>
+      <p>flex:1 才是真正的平均欄寬，原意是 flex:1 1 0% , flex-basis 被設定為0% ，內容不會撐開欄位寬度。</p>
+      <div class="d-flex">
+        <div class="flex-1">Flex Item1  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo,uri in corporis recusandae eius.</div>
+        <div class="flex-1">Flex Item2</div>
+        <div class="flex-1">Flex Item3</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>爆版</h2>
+    <div class="d-flex w-25 border border-5 align-items-center">
+        <div class="flex-shrink-0 w-50 h-75">Item1</div>
+        <div class="flex-shrink-0 w-50 h-75">Item2</div>
+        <div class="flex-shrink-0 w-50 h-75">Item3</div>
+        <div class="flex-shrink-0 w-50 h-75">Item4</div>
+        <div class="flex-shrink-0 w-50 h-75">Item5</div>
+        <div class="flex-shrink-0 w-50 h-75">Item6</div>
+        </div>
+
+        <h2>.flex-wrap</h2>
+        <div class="d-flex flex-wrap">
+        <div class="w-25">Item1</div>
+        <div class="w-25">Item2</div>
+        <div class="w-25">Item3</div>
+        <div class="w-25">Item4</div>
+        <div class="w-25">Item5</div>
+        <div class="w-25">Item6</div>
+      </div>
+
+      <h2>.flex-wrap-reverse</h2>
+        <div class="d-flex flex-wrap-reverse">
+        <div class="w-25">Item1</div>
+        <div class="w-25">Item2</div>
+        <div class="w-25">Item3</div>
+        <div class="w-25">Item4</div>
+        <div class="w-25">Item5</div>
+        <div class="w-25">Item6</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>對齊內容</h2>
+      <p>彈性盒 flex-wrap 屬性一定要wrap</p>
+      <h3>align-content-*</h3>
+      <div class="d-flex flex-wrap align-content-center">
+        <div class="w-25">Item1</div>
+        <div class="w-25">Item2</div>
+        <div class="w-25">Item3</div>
+        <div class="w-25">Item4</div>
+        <div class="w-25">Item5</div>
+        <div class="w-25">Item6</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="d-flex align-items-center">
+        <div class="flex-shrink-0">
+          <img src="https://picsum.photos/100/100/?random=1">
+        </div>
+        <div class="flex-grow-1 ms-3">
+          This is some content from a media component. You can replace this with any content and adjust it as needed.
+        </div>
+      </div>
+    </div>
+
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+</html>

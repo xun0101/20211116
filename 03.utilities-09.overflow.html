@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 通用類別</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    .box{
+      width: 300px;
+      height: 300px;
+      border: 5px solid #333;
+    }
+
+    
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>溢出(overflow)</h1>
+  <div class="row">
+    <div class="col" >
+      <div class="overflow-auto box">
+        <h2>overflow-auto</h2>
+        <h3>自動偵測是否依內容寬度或高度而出現捲動軸</h3>
+      <p style="width: 300px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum laborum quis itaque, molestias voluptateLorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum laborum quis itaque, molestias voluptate
+    </p>
+  </div></div>
+
+    <div class="col" >
+      <div class="overflow-hidden box">
+        <h2>overflow-hidden</h2>
+        <h3>內容影藏起來</h3>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum laborum quis itaque, molestias voluptateLorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum laborum quis itaque, molestias voluptate
+    </p>
+      </div></div>
+    <div class="col" >
+      <div class="overflow-visible box">
+        <h2>overflow-visible</h2>
+        <h3>元素預設值，內容會被顯示出來在元素框外面</h3>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum laborum quis itaque, molestias voluptateLorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum laborum quis itaque, molestias voluptate
+    </p></div></div>
+    <div class="col" >
+      <div class="overflow-scroll box">
+        <h2>overflow-scroll</h2>
+        <h3>不管有沒有溢出都會出現捲動軸</h3>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum laborum quis itaque, molestias voluptateLorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum laborum quis itaque, molestias voluptate
+    </p>
+  </div>
+</div>
+</div>
+
+</div>
+
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+</html>

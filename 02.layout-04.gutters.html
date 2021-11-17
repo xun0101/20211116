@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 排版</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    body{
+      font-size: 1.5rem;
+      font-weight: bolder;
+    }
+
+    h1,
+    h2,
+    p{
+      width: 1320px;
+      margin: 5rem auto;
+    }
+
+    .container{
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>gutters</h1>
+  <h2>沒有使用gutter</h2>
+  <div class="container bg-dark text-warning">
+      <div class="row">
+        <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 border bg-light">Custom column padding</div>
+          </div>
+      </div>
+  </div>
+
+  <h2>使用gutter</h2>
+  <p>在 .row使用 gx-*、g-* 這些class，改變的是 --bs-gutter-x、--bs-gutter-y 兩個原生變數</p>
+  <p>兩個原生變數對應了 .row 的 margin-left、margin-right、margin-top ， 且結果值是負數(往外面推)，會產生溢出的問題，覆蓋影響外面的內容</p>
+  <p>為了達到平衡不影響外面的內容， .container 須配合使用p-* 來與margin 抵銷空間，達到欄位之間的平衡</p>
+  <div class="container p-5 bg-dark text-warning">
+      <div class="row g-5">
+        <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 border bg-light">Custom column padding</div>
+          </div>
+      </div>
+  </div>
+
+  <h2>另一種解決方式 .overflow_hidden 包圍 .row</h2>
+  <P>.overflow_hidden 創建一個BFC，讓裡面的 margin 不會溢出到外面</P>
+  <div class="container bg-dark text-warning overflow-hidden">
+    <div class="row g-5">
+      <div class="col-6">
+      <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+    </div>
+</div>
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+</html>
