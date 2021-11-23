@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    *{
+      transition: .5s;
+    }
+    .pic{
+      background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),url("https://picsum.photos/2000/1800/?random=2")no-repeat center/cover;
+    }
+
+    .item:hover{
+      box-shadow:0 10px 10px 1px rgba(0, 0, 0, 0.5);
+      transform: translateY(-10px);
+    }
+
+    .item:hover img{
+      transform: scale(1.2);
+    }
+
+    .item .img{
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <section class="pic">
+  <div class="container">
+    <div class="d-flex flex-fill align-items-center flex-column py-3 py-md-5">
+    <h1 class="fw-bold">活動專區</h1>
+    <p class="fw-bold fs-5"><a class="text-decoration-none link-primary" href="#">查看所有熱門活動列表 &gt;</a></p>
+    
+    <div class="row gy-3 gx-md-3">
+      <div class=" col-xs-8 col-md-4 ">
+        <div class="item">
+        <div class="img">
+        <img class="img-fluid" src="https://picsum.photos/600/400/?random=1" style="object-fit:cover;">
+        </div>
+        <div class="bg-white p-3">
+        <p>良好筆記本基於精品當時理想地區兩人此時推坑大魔王，面臨電池領域財政也是作家指標，團隊狀態案件是的辦公商家，陽光工藝理想那天加油</p>
+        </div>
+      </div>
+    </div>
+    <div class=" col-xs-8 col-md-4 ">
+      <div class="item">
+      <div class="img">
+      <img class="img-fluid" src="https://picsum.photos/600/400/?random=4" style="object-fit:cover;">
+      </div>
+      <div class="bg-white p-3">
+      <p>良好筆記本基於精品當時理想地區兩人此時推坑大魔王，面臨電池領域財政也是作家指標，團隊狀態案件是的辦公商家，陽光工藝理想那天加油</p>
+      </div>
+    </div>
+  </div>
+  <div class=" col-xs-8 col-md-4 ">
+    <div class="item">
+    <div class="img">
+    <img class="img-fluid" src="https://picsum.photos/600/400/?random=3" style="object-fit:cover;">
+    </div>
+    <div class="bg-white p-3">
+    <p>良好筆記本基於精品當時理想地區兩人此時推坑大魔王，面臨電池領域財政也是作家指標，團隊狀態案件是的辦公商家，陽光工藝理想那天加油</p>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</section>
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+</html>
