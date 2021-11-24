@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    h4{
+      margin:1rem 0;
+    }
+    .container{
+      margin-bottom: 2rem;
+    }
+
+    .content{
+      column-count: 2;
+      column-gap: 1.5rem;
+      column-rule: 1px solid #aaa;
+    }
+
+    .content div{
+      padding: 1rem;
+    }
+
+    .content div::first-letter{
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1>卡片 (Cards)</h1>
+  <p>卡片是非常好用且常見的資訊，可以放置圖片、文字、按鈕或清單等等。主要資訊內容放在 .card-body，另外有圖片、.card-header、.card-footer 這幾個資訊區塊，也很適合混用各種適當的元件</p>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4 gy-3">
+      <div class="card">
+        <img class="card-img-top" src="https://picsum.photos/800/500/?random=1">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 gy-3">
+      <div class="card">
+        <img class="card-img-top" src="https://picsum.photos/800/500/?random=1">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 gy-3">
+      <div class="card">
+        <img class="card-img-top" src="https://picsum.photos/800/500/?random=1">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 gy-3">
+      <div class="card">
+        <img class="card-img-top" src="https://picsum.photos/800/500/?random=1">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 gy-3">
+      <div class="card">
+        <img class="card-img-top" src="https://picsum.photos/800/500/?random=1">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 gy-3">
+      <div class="card">
+        <img class="card-img-top" src="https://picsum.photos/800/500/?random=1">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="container">
+    <h2>混合樣式</h2>
+    <p>資訊區塊可以自由混合搭配</p>
+    <div class="row">
+      <div class="col-3">
+        <div class="card">
+          <img class="card-img-top" src="https://picsum.photos/800/500/?random=1">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <div class="card-footer">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="card">
+          <img class="card-img-top" src="https://picsum.photos/800/500/?random=1">
+          <div class="card-body">
+            <h4 class="card-title">test</h4>
+            <p class="card-text">無門予以具有目的紀念得知新人隨後像素得分作戰新聞。</p>
+          </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">123</li>
+              <li class="list-group-item">456</li>
+              <li class="list-group-item">789</li>
+            </ul>
+          </div>
+          <div class="card-footer text-center">
+            <a href="#">回頂部</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  <h2>圖片 overlay</h2>
+  <p>將圖片轉換為卡片背景，並疊加卡片的文字。 根據圖片，你可以選擇是否需要額外的樣式或通用類別。</p>
+  <p>內容不應大於圖片的高度。如果內容大於圖片，則內容將顯示在圖片外面</p>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>card-img-overlay</h3>
+      <div class="card bg-dark text-white h-100">
+        <img src="https://picsum.photos/1920/1080/?random=1" class="card-img" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            幫助文檔電池財務採訪很好出租會有壓縮你怎麼指定能夠人家社區，小組看看文本是啊投訴，收購中央書庫環境心裡為你，飛機人物當然政治，廣場教材探索列表話題臺灣人網咖施工科學認證，滿意對著，印度歌手加工，十年很多知識一股鎖定尋求絶不進行商標無派內部時間，化工比如服。
+            相信委員會果然無限升級石油不肯頻道建築創造印度等待做法，春天作者自我展開交換意見校長最近大門具體背景，俱樂部我不及其三大特色搜尋引擎，不限大學，圖形習慣請教包括藝術，把他為您看過到達開心你們的補充數字很多，備案破壞設施建議吃飯，硬體股權，回應一樣保證，姓。
+            福建我也所謂，屏東明確不代表輕輕是因為再次綠色關心他人對面緊張，放下也要，本站師傅可以用指導本地招商出處近期後來主流先進，公路記錄新浪陽明山出去，品質畫面是我覺得團隊性質結婚回家部落格尚未就要參觀模糊，明年西部美元，死亡模式細節書記之家，不久飲食，工資幾。
+            認證鼓勵，國語西安挑戰，大盤雲林，循環優點加強，重量社會主義發佈目標商標基金建設一套訊息，反而工商，房價二人那種以及障礙是我交流，不見一會兒教師差距幫你，控制你不精神還沒有承擔，強大幾乎自行天使難以厲害認證流行放棄忽然，驅動黑暗人數表情小七，才會細節，導。
+            觀眾並非，接到所在普遍，前進考慮簡單不是很降價方法觀點總算微微方法前面自然生存，招商股東具體德國至少走進高手瞬間工業怎麼樣，怎麼一遍走進一切都之間斑竹列表風景飛機，任意還有倒是友情連結溫度立即，大賽彼此擔任承認美國各位，空氣無門承受大學生步驟，怎麼樣可以。
+          </p>
+          <p class="card-text">Last updated 3 mins ago</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <h3>background</h3>
+      <div class="card bg-dark text-white h-100">
+        <div class="card-body" style="background: url('https://picsum.photos/1920/1080/?random=1')no-repeat center/cover;">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            幫助文檔電池財務採訪很好出租會有壓縮你怎麼指定能夠人家社區，小組看看文本是啊投訴，收購中央書庫環境心裡為你，飛機人物當然政治，廣場教材探索列表話題臺灣人網咖施工科學認證，滿意對著，印度歌手加工，十年很多知識一股鎖定尋求絶不進行商標無派內部時間，化工比如服。
+            相信委員會果然無限升級石油不肯頻道建築創造印度等待做法，春天作者自我展開交換意見校長最近大門具體背景，俱樂部我不及其三大特色搜尋引擎，不限大學，圖形習慣請教包括藝術，把他為您看過到達開心你們的補充數字很多，備案破壞設施建議吃飯，硬體股權，回應一樣保證，姓。
+            福建我也所謂，屏東明確不代表輕輕是因為再次綠色關心他人對面緊張，放下也要，本站師傅可以用指導本地招商出處近期後來主流先進，公路記錄新浪陽明山出去，品質畫面是我覺得團隊性質結婚回家部落格尚未就要參觀模糊，明年西部美元，死亡模式細節書記之家，不久飲食，工資幾。
+            認證鼓勵，國語西安挑戰，大盤雲林，循環優點加強，重量社會主義發佈目標商標基金建設一套訊息，反而工商，房價二人那種以及障礙是我交流，不見一會兒教師差距幫你，控制你不精神還沒有承擔，強大幾乎自行天使難以厲害認證流行放棄忽然，驅動黑暗人數表情小七，才會細節，導。
+            觀眾並非，接到所在普遍，前進考慮簡單不是很降價方法觀點總算微微方法前面自然生存，招商股東具體德國至少走進高手瞬間工業怎麼樣，怎麼一遍走進一切都之間斑竹列表風景飛機，任意還有倒是友情連結溫度立即，大賽彼此擔任承認美國各位，空氣無門承受大學生步驟，怎麼樣可以。
+          </p>
+          <p class="card-text">Last updated 3 mins ago</p>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h2>水平卡片</h2>
+  <p>card也可以使用網格來建立水平式卡片，例如設計最小尺寸來排列，其他尺寸排列的卡片。.g-0移除網格的gutter</p>
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://picsum.photos/1920/1080/?random=1" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <h1>等高問題處理</h1>
+  <h2>使用卡片群組</h2>
+  <div class="card-group">
+    <div class="card">
+      <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+      <div class="card-body d-flex flex-sm-column">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+      <div class="card-body d-flex flex-sm-column">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text  mb-auto">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+      <div class="card-body d-flex flex-sm-column">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text  mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-group">
+    <div class="card">
+      <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text ms-3"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text ms-3"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text ms-3"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card-group gap-3">
+    <div class="card border">
+      <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer bg-transparent border-top-0">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card  border">
+      <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer bg-transparent border-top-0">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card  border">
+      <img src="https://picsum.photos/400/300/?random=1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer bg-transparent border-top-0">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>網格卡片</h2>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-2 g-xl-3">
+    <div class="col">
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+          <button class="btn btn-primary align-self-start">Button</button>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+          <button class="btn btn-primary align-self-center">Button</button>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+          <button class="btn btn-primary align-self-end">Button</button>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+          <button class="btn btn-primary">Button</button>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+          <button class="btn btn-primary">Button</button>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+          <button class="btn btn-primary">Button</button>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+          <button class="btn btn-primary">Button</button>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://picsum.photos/400/300/?random=1" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+          <button class="btn btn-primary">Button</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <h4>書籍排版 column-count</h4>
+  <div class="content">
+    <div class="float-start">
+      <img src="https://picsum.photos/150/150/?random=1">
+    </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat neque sunt ea veniam veritatis tempore dolore est maiores commodi. Possimus eum minus inventore provident reiciendis, quas repudiandae perspiciatis nam ipsum!Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat neque sunt ea veniam veritatis tempore dolore est maiores commodi. Possimus eum minus inventore provident reiciendis, quas repudiandae perspiciatis nam ipsum!</p>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur reprehenderit dolorum beatae at, incidunt necessitatibus perspiciatis quaerat amet debitis exercitationem nemo ex maxime veniam totam aliquam. Ratione pariatur vero ut!</p>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ipsum quos dolorum libero sint odit tenetur eligendi quis, impedit eius tempora veniam adipisci voluptatum explicabo alias cupiditate eaque numquam reiciendis!</p>
+    </div>
+    <div>
+      <div class="row">
+        <div class="col-6">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero veritatis nisi natus. Ipsa animi ipsum cupiditate? Quisquam at ab eaque adipisci iure voluptatum reiciendis, doloribus accusantium numquam. Quod beatae dolor optio dignissimos. Placeat molestiae amet tenetur maiores doloremque labore, voluptate illo aspernatur, voluptatem qui laborum! Repellat tempora velit veniam iure!
+        </div>
+        <div class="col-6">
+          <img src="https://picsum.photos/150/150/?random=1">
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quam possimus architecto iste nobis aspernatur voluptas consectetur nostrum provident? Ut eum magni ratione eveniet rem! Nisi magni ducimus distinctio tempora?</p>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam enim eum veniam ipsam libero quas ducimus, velit beatae incidunt at modi porro quis explicabo. Aperiam ut fugit explicabo nam optio!</p>
+    </div>
+  </div>
+</div>
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+</html>
