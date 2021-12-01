@@ -7,7 +7,27 @@
   <title>Bootstrap - 元件</title>
   <link rel="stylesheet" href="./css/bootstrap.css">
   <style>
-    
+    /* 改變動畫速率 */
+    /* https://easings.net */
+    /* https://matthewlein.com/tools/ceaser */
+    .carousel-item{
+      /* 動畫執行時的秒數 */
+      transition: 2s all cubic-bezier(0.68,-0.6,0.32,1.6);
+    }
+
+    #Lin .carousel-control-prev{
+      background: linear-gradient(90deg, rgba(0,0,0,0.75), transparent);
+    }
+
+    #Lin .carousel-control-next{
+      background: linear-gradient(270deg, rgba(0,0,0,0.75), transparent);
+    }
+
+    .carousel-indicators [data-bs-target] {
+      height: 30px;
+      border-radius: 50%;
+      text-indent: 0;
+    }
   </style>
 </head>
 <body>
@@ -18,13 +38,13 @@
     <!-- carousel-dark 深色模式 文字變成黑色 -->
     <!-- data-bs-interval="5000" 為每張圖片延遲的時間 -->
     <!-- data-bs-touch="true" 設定行動裝置可以觸控滑動 -->
-    <div id="Lin" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-touch="true">
+    <div id="Lin" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000" data-bs-touch="true">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#Lin" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#Lin" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#Lin" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#Lin" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#Lin" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#Lin" data-bs-slide-to="0" class="active">1</button>
+        <button type="button" data-bs-target="#Lin" data-bs-slide-to="1">2</button>
+        <button type="button" data-bs-target="#Lin" data-bs-slide-to="2">3</button>
+        <button type="button" data-bs-target="#Lin" data-bs-slide-to="3">4</button>
+        <button type="button" data-bs-target="#Lin" data-bs-slide-to="4">5</button>
       </div>
       <div class="carousel-inner">
         <!-- 可以個別指定 .carousel-item 的 data-bs-interval 延遲轉場時間 -->
@@ -78,6 +98,9 @@
       </button>
     </div>
   </div>
+  <!-- <p style="text-indent: 2rem;">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem iure quidem ipsa. Quidem minima dolore fuga necessitatibus natus doloremque unde repellat, qui sunt repellendus in, voluptas corporis minus ratione exercitationem!
+  </p> -->
   <script src="./js/bootstrap.bundle.js"></script>
 </body>
 </html>

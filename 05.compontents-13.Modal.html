@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css'/>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    .animate__duration{
+      animation-duration:.5s;
+    }
+    /* 修改transition-duration 可以更改淡入淡出時間 */
+    .fade{
+      transition-duration: .5s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>互動視窗 (Modal)</h1>
+    <h2>觸發按鈕</h2>
+    <ul>
+      <li>可以使用button或a元素觸發modal 視窗，並啟動data-bs-toggle="modal"效果</li>
+      <li>兩者觸發需要對應modal主體的id</li>
+      <li>使用butto時，在data-bs-target設定id</li>
+      <li>使用a時，設定href=""#id</li>
+    </ul>
+
+    <div class="row">
+      <div class="col">    
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Lin">
+          使用button觸發modal視窗
+        </button>
+        <a href="#Lin" class="btn btn-primary" data-bs-toggle="modal">
+          使用a觸發modal視窗
+        </a>
+      </div>
+    </div>
+  </div>
+<!-- Modal主體________________________________________________________________________________________________ -->
+<!--  
+  .fade淡入、淡出轉場效果
+  data-bs-backdrop="static"可鎖定背景，點擊背景時不會自動關閉modal，一定要點關閉按鈕或是X 
+-->
+<div class="modal fade" id="Lin" data-bs-backdrop="static">
+  <!-- modal-dialog-centered可讓互動視窗垂直置中 -->
+  <!-- 調整視窗大小 modal-xl(1140px) modal-lg(800px) modal-sm(300px) 沒寫是500px -->
+  <!-- modal-dialog-scrollable 可創建一個滾動的互動視窗 -->
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">互動視窗</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>五金順利群發起來，新技術你的最終本月你會增強員工戰略檢測執行時間今後，至少一會快樂小組一場效果豪華手續因而大哥附近，立刻有着可憐大小建設我想怎麼辦手上結婚處理，呼吸怎麼承諾二人，一下子魔法軍事隊員空調台北原來性別聯繫，活動賺錢值得編輯猶豫，領先東京光碟另。</p>
+        <!-- 可以搭配網格使用 -->
+        <div class="row">
+          <div class="col-6">
+            <img class="w-100 h-100" src="https://picsum.photos/1920/600/?random=1" style="object-fit: cover;">
+          </div>
+          <div class="col-6">
+            <p>
+              臺灣預期這段懷疑放棄不管，億元發表，老公和你你看寵物，即可離線全部，讓我我看都要概念支持天氣不在事項文章填寫取得，一次雖然專輯一系列這個需求幽默，承諾交易原來，溫州招標至少做好物品，播放就業您現在出現種類女人當天表演畢業生這就是聯想含有，較大台北要去有的。
+              臺灣預期這段懷疑放棄不管，億元發表，老公和你你看寵物，即可離線全部，讓我我看都要概念支持天氣不在事項文章填寫取得，一次雖然專輯一系列這個需求幽默，承諾交易原來，溫州招標至少做好物品，播放就業您現在出現種類女人當天表演畢業生這就是聯想含有，較大台北要去有的。
+              臺灣預期這段懷疑放棄不管，億元發表，老公和你你看寵物，即可離線全部，讓我我看都要概念支持天氣不在事項文章填寫取得，一次雖然專輯一系列這個需求幽默，承諾交易原來，溫州招標至少做好物品，播放就業您現在出現種類女人當天表演畢業生這就是聯想含有，較大台北要去有的。
+              臺灣預期這段懷疑放棄不管，億元發表，老公和你你看寵物，即可離線全部，讓我我看都要概念支持天氣不在事項文章填寫取得，一次雖然專輯一系列這個需求幽默，承諾交易原來，溫州招標至少做好物品，播放就業您現在出現種類女人當天表演畢業生這就是聯想含有，較大台北要去有的。
+              臺灣預期這段懷疑放棄不管，億元發表，老公和你你看寵物，即可離線全部，讓我我看都要概念支持天氣不在事項文章填寫取得，一次雖然專輯一系列這個需求幽默，承諾交易原來，溫州招標至少做好物品，播放就業您現在出現種類女人當天表演畢業生這就是聯想含有，較大台北要去有的。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!-- data-bs-dismiss="modal" 關閉互動視窗 -->
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<div class="container">
+  <h2>不同的互動視窗內容</h2>
+  <p>有數個按鈕要用來觸發相同互動視窗，但會導入不同內容？ 使用 event.relatedTarget 和 HTML data-bs-* 屬性 依據點擊按鈕來更改動態視窗的內容。</p>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script>
+    //抓DOM
+    var exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', function (event) {
+  // relatedTarget 為相對觸發者，也就是按紐
+  var button = event.relatedTarget
+  // 取得按鈕 data-bs-whatever 的值
+  var recipient = button.getAttribute('data-bs-whatever')
+  // 抓modal-title
+  var modalTitle = exampleModal.querySelector('.modal-title')
+  //抓modal-body input
+  var modalBodyInput = exampleModal.querySelector('.modal-body input')
+  modalTitle.textContent = 'New message to ' + recipient
+  modalBodyInput.value = recipient
+})
+
+//改變進出場動畫
+const Lin = document.querySelector('#Lin')
+const dialog = document.querySelector('#Lin .modal-dialog')
+Lin.addEventListener('show.bs.modal',function (e) {
+  goAnimation('animate__zoomOutUp','animate__zoomInDown')
+})
+
+Lin.addEventListener('hide.bs.modal',function (e) {
+  goAnimation('animate__InDown','animate__zoomOutUp')
+})
+
+function goAnimation(removeAnimation, addAnimation) {
+  //只移除指定的class
+  dialog.classList.remove(removeAnimation)
+  //只新增想要增加的class
+  dialog.classList.add('animate__animated',addAnimation,'animate__duration')
+}
+  </script>
+</body>
+</html>
