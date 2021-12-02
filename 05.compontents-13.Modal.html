@@ -115,6 +115,170 @@
     </div>
   </div>
 </div>
+<div class="container">
+  <h2>在互動視窗間切換</h2>
+  <p>
+    通過設定 data-bs-target 和 data-bs-toggle 屬性在多個互動視窗中切換。例如，你可以從已經打開的登錄視窗中切換為重新設定密碼的視窗。請注意不能同時打開多個互動視窗—這種方法只是在兩個單獨的互動視窗之間切換。
+  </p>
+  <a class="btn btn-primary" data-bs-toggle="modal" href="#firstModal" role="button">Open first modal</a>
+  <!-- modal1 -->
+  <div class="modal fade" id="firstModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Show a second modal and hide this one with the button below.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#secondmodal" data-bs-toggle="modal">Open second modal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal2 -->
+  <div class="modal fade" id="secondmodal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Hide this modal and show the first with the button below.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#firstModal" data-bs-toggle="modal">Back to first</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <h2>滿版互動視窗</h2>
+  <p>.modal-dialog新增 .modal-fullscreen系列，可讓class互動視頻滿版</p>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreen">Full screen</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenSm">Full screen below sm</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenMd">Full screen below md</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenLg">Full screen below lg</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenXl">Full screen below xl</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenXxl">Full screen below xxl</button>
+</div>
+<!-- modal-fullscreen總是滿版 -->
+<div class="modal fade" id="fullscreen" >
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- .modal-fullscreen-sm-down => sm以下滿版 -->
+<div class="modal fade" id="fullscreenSm" >
+  <div class="modal-dialog modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- .modal-fullscreen-md-down => md以下滿版 -->
+<div class="modal fade" id="fullscreenMd" >
+  <div class="modal-dialog modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- .modal-fullscreen-lg-down => lg以下滿版 -->
+<div class="modal fade" id="fullscreenLg" >
+  <div class="modal-dialog modal-fullscreen-lg-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- .modal-fullscreen-xl-down => xl以下滿版 -->
+<div class="modal fade" id="fullscreenXl" >
+  <div class="modal-dialog modal-fullscreen-xl-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- .modal-fullscreen-xxl-down => xxl以下滿版 -->
+<div class="modal fade" id="fullscreenXxl" >
+  <div class="modal-dialog modal-fullscreen-xxl-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <script src="./js/bootstrap.bundle.js"></script>
   <script>
     //抓DOM

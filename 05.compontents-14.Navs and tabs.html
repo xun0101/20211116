@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    body{
+      padding-bottom: 200px;
+    }
+    .container,
+    h2,
+    h3,
+    h4{
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>導覽與頁籤 (Navs and tabs)</h1>
+    <p>.nav本身是彈性盒，子元素無論是.nav-item或是.nav-link都是彈性項目，運作行為都一樣</p>
+    <div class="row">
+      <div class="col-12">
+        <h2>.nav-item</h2>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12">
+        <h2>.nav-link</h2>
+        <nav class="nav">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link disabled">Disabled</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>水平對齊</h2>
+    <p>.nav本身是彈性盒，可以使用主軸對齊的屬性class 如.justify-content-center</p>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h2>垂直排列</h2>
+    <p>.nav本身是彈性盒，可以改變主軸的方向 如..flex-column</p>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-auto">
+        <h2>分頁標籤</h2>
+        <p>新增 .nav-tabs 為分頁標籤</p>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-auto">
+        <h2>膠囊狀</h2>
+        <p>新增 .nav-pills 為膠囊狀</p>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h2>填充和對齊</h2>
+    <p>.nav 內容有兩種寬度擴展用的 Class，使用 .nav-fill 會將 .nav-item 內容按照比例分配空間。注意，這會佔用所有的水平空間，但並不是每個導覽項目都具有相同寬度。</p>
+    <h3>1. .nav-fill</h3>
+    <p>使用.nav-fill會將剩餘的空間分給.nav-item，但並不是每個.nav-item都是相同寬度，而是將剩餘的空間平均分給.nav-item內容的左右兩側空間</p>
+    <p>.nav-fill是flex:1 1 auto => :flex-auto => flex-grow:1</p>
+    <div class="row">
+      <div class="col-12">
+        <h4>.nav-fill在.nav-tbs</h4>
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link active "href="#">Lorem.</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">來自青春。來自青春</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">來Lorem.</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active">Lorem.。</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12">
+        <h4>.nav-fill在.nav-pill</h4>
+        <nav class="nav nav-pills nav-fill">
+          <a class="nav-link active bg-danger" aria-current="page" href="#">Active</a>
+          <a class="nav-link active bg-danger" href="#">一張喜歡。</a>
+          <a class="nav-link active bg-danger" href="#">Link</a>
+          <a class="nav-link active bg-danger">一張喜歡。一張喜歡。一張喜歡。一張喜歡。</a>
+        </nav>
+      </div>
+    </div>
+
+    <h3>2. .nav-justified</h3>
+    <p>想要等寬的 .nav-item，使用 .nav-justified</p>
+    <p>兩者不一樣的是 .nav-justified 的 flex-basis:auto 被設定成 flex-basis:0， flex-basis 對內容寬度無效化</p>
+    <div class="row gy-3 mb-3">
+      <div class="col-12">
+        <h4>.nav-justified 在 nav-tbs</h4>
+        <ul class="nav nav-pills nav-justified">
+          <li class="nav-item">
+            <a class="nav-link active "href="#">Lorem.</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">來自青春。來自青春來自青春。來自青春來自青春。來自青春</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">來Lorem.</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active">Lorem.。</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12">
+        <h4>.nav-fill在.nav-pill</h4>
+        <nav class="nav nav-pills nav-justified">
+          <a class="nav-link active bg-danger" aria-current="page" href="#">Active</a>
+          <a class="nav-link active bg-danger" href="#">一張喜歡。</a>
+          <a class="nav-link active bg-danger" href="#">Link</a>
+          <a class="nav-link active bg-danger">一張喜歡。一張喜歡。一張喜歡。一張喜歡。</a>
+        </nav>
+      </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h2>帶下拉選單的分頁標籤</h2>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Dropdown</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Link</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h2>JavaScript 行為</h2>
+    <h3>使用 data 屬性設定</h3>
+    <ul>
+      <li>先確認使用.nav-tbs或.nav-pills</li>
+      <li>如果是.nav-tbs在分頁按鈕加上data-bs-toggle="tab"啟動tab功能</li>
+      <li>如果是.nav-pills在分頁按鈕加上data-bs-toggle="pill"啟動pill功能</li>
+      <li>確認對應的錨點 id。範例是 #html #css #js</li>
+      <li>如果是button 使用data-bs-target="#id"。如果是a使用href="#id"</li>
+    </ul>
+    <!-- 分頁選單區 -->
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="pill" data-bs-target="#html" >HTML</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="pill" data-bs-target="#css">CSS</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="pill" data-bs-target="#js">JavaScript</button>
+      </li>
+    </ul>
+    <!-- 內容呈現區 -->
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="html">
+        超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。
+HTML元素是構建網站的基石。HTML允許嵌入圖像與物件，並且可以用於建立互動式表單，它被用來結構化資訊——例如標題、段落和列表等等，也可用來在一定程度上描述文件的外觀和語意。HTML的語言形式為尖括號包圍的HTML元素（如<html>），瀏覽器使用HTML標籤和指令碼來詮釋網頁內容，但不會將它們顯示在頁面上。
+HTML可以嵌入如JavaScript的手稿語言，它們會影響HTML網頁的行為。網頁瀏覽器也可以參照階層式樣式表（CSS）來定義文字和其它元素的外觀與布局。維護HTML和CSS標準的組織全球資訊網協會（W3C）鼓勵人們使用CSS替代一些用於表現的HTML元素[4]。
+      </div>
+      <div class="tab-pane fade" id="css">
+        階層式樣式表（英語：Cascading Style Sheets，縮寫：CSS；又稱串樣式列表、級聯樣式表、串接樣式表、階層式樣式表）是一種用來為結構化文件（如HTML文件或XML應用）添加樣式（字型、間距和顏色等）的電腦語言，由W3C定義和維護。CSS 被分為不同等級：CSS1 現已廢棄， CSS2.1 是推薦標準， CSS3 分成多個小模組且正在標準化中。[來源請求]CSS3現在已被大部分現代瀏覽器支援，而下一版的CSS4仍在開發中
+      </div>
+      <div class="tab-pane fade" id="js">
+        JavaScript（通常縮寫為JS）是一種進階的、直譯的程式語言[8]。JavaScript是一門基於原型、頭等函式的語言[9]，是一門多範式的語言，它支援物件導向程式設計，指令式編程，以及函式語言程式設計。它提供語法來操控文字、陣列、日期以及正規表示式等，不支援I/O，比如網路、儲存和圖形等，但這些都可以由它的宿主環境提供支援。它已經由ECMA（歐洲電腦製造商協會）透過ECMAScript實作語言的標準化[8]。它被世界上的絕大多數網站所使用，也被世界主流瀏覽器（Chrome、IE、Firefox、Safari、Opera）支援。
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- 分頁選單區 -->
+    <div class="d-flex align-items-start">
+      <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist">
+        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab">HTML</button>
+        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" >CSS</button>
+        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" >JavaScript</button>
+        <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab">Settings</button>
+      </div>
+      <!-- 內容呈現區 -->
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel">
+          超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。
+HTML元素是構建網站的基石。HTML允許嵌入圖像與物件，並且可以用於建立互動式表單，它被用來結構化資訊——例如標題、段落和列表等等，也可用來在一定程度上描述文件的外觀和語意。HTML的語言形式為尖括號包圍的HTML元素（如<html>），瀏覽器使用HTML標籤和指令碼來詮釋網頁內容，但不會將它們顯示在頁面上。
+HTML可以嵌入如JavaScript的手稿語言，它們會影響HTML網頁的行為。網頁瀏覽器也可以參照階層式樣式表（CSS）來定義文字和其它元素的外觀與布局。維護HTML和CSS標準的組織全球資訊網協會（W3C）鼓勵人們使用CSS替代一些用於表現的HTML元素[4]。
+        </div>
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel">
+          階層式樣式表（英語：Cascading Style Sheets，縮寫：CSS；又稱串樣式列表、級聯樣式表、串接樣式表、階層式樣式表）是一種用來為結構化文件（如HTML文件或XML應用）添加樣式（字型、間距和顏色等）的電腦語言，由W3C定義和維護。CSS 被分為不同等級：CSS1 現已廢棄， CSS2.1 是推薦標準， CSS3 分成多個小模組且正在標準化中。[來源請求]CSS3現在已被大部分現代瀏覽器支援，而下一版的CSS4仍在開發中
+        </div>
+        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel">
+          JavaScript（通常縮寫為JS）是一種進階的、直譯的程式語言[8]。JavaScript是一門基於原型、頭等函式的語言[9]，是一門多範式的語言，它支援物件導向程式設計，指令式編程，以及函式語言程式設計。它提供語法來操控文字、陣列、日期以及正規表示式等，不支援I/O，比如網路、儲存和圖形等，但這些都可以由它的宿主環境提供支援。它已經由ECMA（歐洲電腦製造商協會）透過ECMAScript實作語言的標準化[8]。它被世界上的絕大多數網站所使用，也被世界主流瀏覽器（Chrome、IE、Firefox、Safari、Opera）支援。
+        </div>
+        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel">...</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3 id="jsSetting">jsSetting</h3>
+    <!-- 分頁選單區 -->
+    <ul id="Lin" class="nav nav-pills">
+      <li class="nav-item">
+        <a href="#a1"  class="nav-link active">html</a>
+      </li>
+      <li class="nav-item">
+        <a href="#a2"  class="nav-link">css</a>
+      </li>
+      <li class="nav-item">
+        <a href="#a3"  class="nav-link">js</a>
+      </li>
+    </ul>
+    <!-- 內容呈現區 -->
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="a1">
+        超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。
+HTML元素是構建網站的基石。HTML允許嵌入圖像與物件，並且可以用於建立互動式表單，它被用來結構化資訊——例如標題、段落和列表等等，也可用來在一定程度上描述文件的外觀和語意。HTML的語言形式為尖括號包圍的HTML元素（如<html>），瀏覽器使用HTML標籤和指令碼來詮釋網頁內容，但不會將它們顯示在頁面上。
+HTML可以嵌入如JavaScript的手稿語言，它們會影響HTML網頁的行為。網頁瀏覽器也可以參照階層式樣式表（CSS）來定義文字和其它元素的外觀與布局。維護HTML和CSS標準的組織全球資訊網協會（W3C）鼓勵人們使用CSS替代一些用於表現的HTML元素[4]。
+      </div>
+      <div class="tab-pane fade" id="a2">
+        階層式樣式表（英語：Cascading Style Sheets，縮寫：CSS；又稱串樣式列表、級聯樣式表、串接樣式表、階層式樣式表）是一種用來為結構化文件（如HTML文件或XML應用）添加樣式（字型、間距和顏色等）的電腦語言，由W3C定義和維護。CSS 被分為不同等級：CSS1 現已廢棄， CSS2.1 是推薦標準， CSS3 分成多個小模組且正在標準化中。[來源請求]CSS3現在已被大部分現代瀏覽器支援，而下一版的CSS4仍在開發中
+      </div>
+      <div class="tab-pane fade" id="a3">
+        JavaScript（通常縮寫為JS）是一種進階的、直譯的程式語言[8]。JavaScript是一門基於原型、頭等函式的語言[9]，是一門多範式的語言，它支援物件導向程式設計，指令式編程，以及函式語言程式設計。它提供語法來操控文字、陣列、日期以及正規表示式等，不支援I/O，比如網路、儲存和圖形等，但這些都可以由它的宿主環境提供支援。它已經由ECMA（歐洲電腦製造商協會）透過ECMAScript實作語言的標準化[8]。它被世界上的絕大多數網站所使用，也被世界主流瀏覽器（Chrome、IE、Firefox、Safari、Opera）支援。
+      </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script>
+    const tabs = document.querySelectorAll('#Lin a')
+    const header = document.querySelector('#jsSetting')
+    // console.log(tabs)
+    tabs.forEach(tab => {
+      const tabBS = new bootstrap.Tap(tab)
+      tab.addEventListener('click',function (e) {
+        e.preventDefault()
+        tabBS.show()
+      })
+      // 當分頁被點選時做甚麼
+      tab.addEventListener('show.bs.tab',function(e){
+        header.style.color='red'
+      })
+      // 當分頁被點選後做什麼
+      tab.addEventListener('show.bs.tab',function(e){
+        setTimeout(()=>{
+          header.style.color = 'green'
+        },3000)
+      })
+    })
+  </script>
+</body>
+</html>
