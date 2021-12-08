@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    h2 {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>彈出提示框 (Popovers)</h1>
+    <ul>
+      <li>彈出提示框需依靠第三方函式庫 Popper 進行定位。您必須在 bootstrap.js 之前引入 popper.min.js 或是使用已經包含 Popper 的 bootstrap.bundle.min.js / bootstrap.bundle.js 讓彈出提示框運作。</li>
+      <li>設定 data 屬性不能啟動，需使用程式啟動，使用方式與 Tooltipd 相同</li>
+    </ul>
+    <!-- 
+      data-bs-placement 為彈出方向 top right bottom left
+        data-bs-trigger 值預設 click focus hover，值可以多個觸發值，如"hover focus"
+        click => 需在按鈕上再 click 才會收起popover
+        focus => 下一次在任何地方 click 收起 popover
+        hover => 摸到按鈕彈出 popover
+      data-bs-offset 水平 垂直位移
+    -->
+    <button id="Lin" type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="標題" data-bs-content="彈出的內容....都是天堂英文，台中發送別人女孩子參與傳真沒什麼一股什麼下去明天形勢，西"
+    data-bs-placement="bottom" data-bs-trigger="hover focus" data-bs-offset="20,50">Click to toggle popover</button>
+
+    <h2>使用JavaScript</h2>
+    <div class="row">
+      <div class="col">
+        <button id="js" type="button" class="btn btn-success">彈出訊息</button>
+      </div>
+      <div class="col"></div>
+    </div>
+
+
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script>
+    const Lin = document.querySelector('#Lin')
+    new bootstrap.Popover(Lin)
+
+    // 使用JavaScript
+    const js =document.querySelector('#js')
+    const popover = new bootstrap.Popover(js,{
+      container:'body',
+      title: 'title 12345',
+      content: function() {
+        return 'hello world'
+      },
+      placement:'bottom',
+      trigger: 'focus click'
+    })
+
+    js.addEventListener('click', function () {
+      popover.toggle()
+    })
+
+    js.addEventListener('show.bs.popover',function(){
+      alert('當調用 show 實例方法時，此事件會立即觸發。')
+    })
+  </script>
+</body>
+</html>

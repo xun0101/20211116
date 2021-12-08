@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    body{
+      padding-bottom: 300px;
+    }
+    h2,
+    h3,
+    p{
+      margin: 20px 0;
+    }
+
+    hr {
+      margin: 30px auto;
+      width: 95%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>驗證 (Validation)</h1>
+    <p>HTML 表單驗證是透過CSS的兩個偽類，:invalid、:valid來應用的，適用於input select textarea等元素</p>
+    <p>設定完成要按下送出表單才會有作用</p>
+    <!-- needs-validation 與 novalidate 是必須的 -->
+    <!-- 送出表單時會新增 .was-validated -->
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">First name</label>
+        <!-- required 屬性欄位必須要輸入 -->
+        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+        <!-- .valid-feedback 表單內容有內容時要回饋的訊息 -->
+        <div class="valid-feedback">
+          成功
+        </div>
+        <!-- .invalid-feedback 表單內容沒有內容時要回饋的訊息 -->
+        <div class="invalid-feedback">
+          請輸入first name
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+        <div class="valid-feedback">
+          成功
+        </div>
+        <div class="invalid-feedback">
+          請輸入last name
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label">Username</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+          <div class="valid-feedback">
+            成功
+          </div>
+          <div class="invalid-feedback">
+            請輸入username.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">City</label>
+        <input type="text" class="form-control" id="validationCustom03" required>
+        <div class="valid-feedback">
+          成功
+        </div>
+        <div class="invalid-feedback">
+          請輸入城市
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">State</label>
+        <select class="form-select" id="validationCustom04" required>
+          <option selected disabled value="">Choose...</option>
+          <option>...</option>
+        </select>
+        <div class="valid-feedback">
+          成功
+        </div>
+        <div class="invalid-feedback">
+          請選擇
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom05" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="validationCustom05" required>
+        <div class="valid-feedback">
+          成功
+        </div>
+        <div class="invalid-feedback">
+          請輸入郵遞區號
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+  </script>
+</body>
+</html>

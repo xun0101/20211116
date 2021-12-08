@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    h2,
+    h3,
+    h4
+    {
+      margin: 20px 0;
+    }
+    .progress{
+      margin-bottom: 20px;
+    }
+    .container{
+      margin-bottom: 20px;
+    }
+    #progress{
+      margin-bottom: 20px;
+    }
+    #progress .progress-bar{
+      background-color: purple;
+    }
+    #progress .progress-bar.active~ .progress-bar{
+      background-color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>進度條 (Progress)</h3>
+    <ol>
+      <li>外層使用 .progress 來指定進度條的最大值</li>
+      <li>內層使用 .progress-bar 來指定進度條目前的值</li>
+      <li>.progress-bar 可以用行內樣式、通用類別class來設定寬度</li>
+      <li></li>
+    </ol>
+
+    <div class="row">
+      <div class="col">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar w-25"></div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="width: 50%"></div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="width: 75%"></div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="width: 100%"></div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>文字內容</h2>
+    <P>在.progress-bar 中放置文字容，顯示進度條的值</P>
+    <div class="progress">
+      <div class="progress-bar w-25">25%</div>
+    </div>
+
+    <hr>
+
+    <h2>高度</h2>
+    <p>在.progress 設置一個height可表示高度</p>
+    <div class="progress" style="height: 1px;">
+      <div class="progress-bar w-25">25%</div>
+    </div>
+    <div class="progress" style="height: 20px;">
+      <div class="progress-bar w-25">25%</div>
+    </div>
+
+    <h2>背景與條紋狀、動畫</h2>
+    <p>在.progress-bar 加上背景色改變進度條外觀</p>
+    <p>在.progress-bar-striped 可變成條紋狀</p>
+    <p>在.progress-bar-animated 進度條動畫</p>
+    <div class="progress">
+      <div class="progress-bar progress-bar-animated progress-bar-striped w-25 bg-success">25%</div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-animated progress-bar-striped w-50 bg-info">50%</div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-animated progress-bar-striped w-75 bg-warning">75%</div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar w-100 bg-danger">100%</div>
+    </div>
+
+  <hr>
+
+  <h2>多個進度條</h2>
+  <div id="progress" class="progress fs-6" style="height: 30px;">
+    <div class="progress-bar progress-bar-striped progress-bar-animated " style="width: 20%">步驟一</div>
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 20%">步驟二</div>
+    <div class="progress-bar progress-bar-striped progress-bar-animated active" style="width: 20%">步驟三</div>
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 20%">步驟四</div>
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 20%">步驟五</div>
+  </div>
+
+
+
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+</html>

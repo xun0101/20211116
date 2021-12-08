@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    body{
+      padding-bottom: 300px;
+    }
+    h2,
+    h3,
+    p{
+      margin: 20px 0;
+    }
+
+    hr {
+      margin: 30px auto;
+      width: 95%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>表單控制 (Form controls)</h1>
+    <p>使用自定義的樣式，尺寸，focus 狀態等為文本形式控制元件如 input、textarea 進行升級</p>
+    <p>label for屬性值對應了表單的 id</p>
+
+    <div class="mb-3">
+      <label for="Lin_email" class="form-label">電子郵件</label>
+      <input id="Lin_email" type="email" class="form-control"  placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="Lin-textarea" class="form-label">留言訊息</label>
+      <textarea id="Lin-textarea" class="form-control"  rows="3"></textarea>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h2>appearance</h2>
+    <p>CSS屬性appearance:none，可以重置表單自訂外觀</p>
+  </div>
+
+  <hr>
+
+  
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+</html>

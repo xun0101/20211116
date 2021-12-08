@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>工具提示框 (Tooltips)</h1>
+    <ul>
+      <li>彈出提示框需依靠第三方函式庫 Popper 進行定位。您必須在 bootstrap.js 之前引入 popper.min.js 或是使用已經包含 Popper 的 bootstrap.bundle.min.js / bootstrap.bundle.js 讓彈出提示框運作。</li>
+      <li>設定 data 屬性不能啟動，需使用程式啟動，使用方式與 Popover 相同</li>
+    </ul>
+    <h2>單一啟動</h2>
+    <!-- <button id="start" type="button" class="btn btn-secondary mb-3" data-bs-toggle="tooltip" data-bs-placement="right" title="啟動tooltip">
+      單一啟動
+    </button> -->
+
+    <h2>多個啟動</h2>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+      Tooltip on top
+    </button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+      Tooltip on right
+    </button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+      Tooltip on bottom
+    </button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+      Tooltip on left
+    </button>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script>
+    // 單個啟動
+    // const tooltipStart = document.querySelector('#start')
+    // new bootstrap.Tooltip(tooltipStart)
+    // 多個啟動
+    const tooltipArrayLike = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    console.log(tooltipArrayLike)
+    // 1.使用 Array.prototype.slice.call 轉為真正的陣列
+    // const tooltipArrayLike = Array.prototype.slice.call(tooltipArrayLike)
+    // 2.使用解構轉為真正的陣列
+    // const tooltipArray = [... tooltipArrayLike]
+    // 3.使用Array.from轉為真正的陣列
+    const tooltipArray = Array.from(tooltipArrayLike)
+    const tooltipBS = tooltipArray.map(function (element) {
+      return new bootstrap.Tooltip(element)
+    })
+    
+  //     const myDate = new Date()
+  //     console.dir(myDate)
+  // </script>
+</body>
+</html>

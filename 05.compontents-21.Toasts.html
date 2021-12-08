@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - 元件</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>吐司 (Toasts)</h1>
+    <p>透過吐司向使用者推播通知，它是一種輕量且易於客製化的警報消息</p>
+
+    <h2>單個</h2>
+<button id="btn_single" type="button" class="btn btn-primary" >Single toast</button>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <!-- toast原本是關閉，要讓它出現在.toast 增加 show 來觀察其結構 -->
+  <!-- data-bs-autohide 設定false 吐司不會自動消失， true會自動消失 -->
+  <!--  data-bs-delay延遲幾秒後消失 -->
+  <div id="toast_single" class="toast" role="alert" data-bs-autohide="true" data-bs-delay="3000">
+    <div class="toast-header">
+      <img class="rounded me-2" src="https://picsum.photos/20/20/?random=1">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+
+<hr>
+<button type="button" class="btn btn-primary btn_multiple" >Single toast1</button>
+<button type="button" class="btn btn-primary btn_multiple" >Single toast2</button>
+<button type="button" class="btn btn-primary btn_multiple" >Single toast3</button>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+  <div id="toast1" class="toast toast_multiple" role="alert" data-bs-autohide="true">
+    <div class="toast-header">
+      <img class="rounded me-2" src="https://picsum.photos/20/20/?random=1">
+      <strong class="me-auto">多個 1</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">
+      損失考慮，根本表達充分些什麼。損失考慮，根本表達充分些什麼。損失考慮，根本表達充分些什麼。損失考慮，根本表達充分些什麼。損失考慮，根本表達充分些什麼。
+    </div>
+  </div>
+  <div id="toast2" class="toast toast_multiple" role="alert" data-bs-autohide="true">
+    <div class="toast-header">
+      <img class="rounded me-2" src="https://picsum.photos/20/20/?random=1">
+      <strong class="me-auto">多個 2</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">
+      治理套件道路看到一支最為以往傢伙一口挑戰，笑容國產成立微笑有機會房東有了聰明主題相冊，內。
+    </div>
+  </div>
+  <div id="toast3" class="toast toast_multiple" role="alert" data-bs-autohide="true">
+    <div class="toast-header">
+      <img class="rounded me-2" src="https://picsum.photos/20/20/?random=1">
+      <strong class="me-auto">多個 3</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">
+      第二次股權兄弟爸爸收藏本頁法律平均傳奇大型，本公司幫助必須，找到生活裝備無比顯然仍然書庫玄幻出售起。
+    </div>
+  </div>
+</div>
+</div>
+
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script>
+    const btn_single = document.querySelector('#btn_single')
+    const toast_single = document.querySelector('#toast_single')
+    if(btn_single){
+      btn_single.addEventListener('click',function(){
+        // 轉成bootstrap的Toast實體
+        const toastBS = new bootstrap.Toast(toast_single)
+        toastBS.show()
+      })
+    }
+
+    // 多個
+    // DOM's 的類陣列
+    const btns = document.querySelectorAll('.btn_multiple')
+    // DOM's 的類陣列轉陣列
+    const toasts = Array.from(document.querySelectorAll('.toast_multiple'))
+
+    const toastBS = toasts.map(function(toast){
+      return new bootstrap.Toast(toast, {
+        delay: 3000
+      })
+    })
+
+    btns.forEach(function (btn,index) {
+      btn.addEventListener('click', function(){
+        toastBS[index].show()
+      })
+    })
+
+    const toast1 = document.querySelector('#toast1')
+    toast1.addEventListener('show.bs.toast', function() {
+      alert('當調用 show 方法時，此事件會立即觸發。')
+    })
+  </script>
+</body>
+</html>
